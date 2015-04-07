@@ -1,0 +1,39 @@
+<h1>Listing friends</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Avatar</th>
+      <th>Like</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @friends.each do |friend| %>
+      <tr>
+        <td><%= friend.name %></td>
+        <td><%= image_tag friend.avatar.url %></td>
+        <td><%= friend.like %></td>
+        <td><%= link_to 'Show', friend %></td>
+        <td><%= link_to 'Edit', edit_friend_path(friend) %></td>
+        <td><%= link_to 'Destroy', friend, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Friend', new_friend_path %>
+
+
+
+<h3>Swipe the green rectangle in the right direction to change its color:</h3>
+<div class="box">
+
+  <%= @friends.first.like %>
+  <%= @friends.first.id %>
+
+</div>
