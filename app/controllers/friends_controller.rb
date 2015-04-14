@@ -10,6 +10,7 @@ class FriendsController < ApplicationController
     @friends.like = true
     puts @friends.like.inspect
     @friends.save
+    render partial: 'partials/gym_buddy'
   end
 
   def dislike
@@ -18,6 +19,7 @@ class FriendsController < ApplicationController
     @friends.like = false
     puts @friends.like.inspect
     @friends.save
+    render partial: 'partials/gym_buddy'
   end
 
   def index
