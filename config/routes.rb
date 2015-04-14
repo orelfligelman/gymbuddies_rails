@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :butts
+
   resources :friends do
     member do
       post 'like'

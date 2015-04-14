@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  location: MyString
+  fart: false
+  shape: MyString
+  percentbodysize: 1.5
+
+two:
+  name: MyString
+  location: MyString
+  fart: false
+  shape: MyString
+  percentbodysize: 1.5
