@@ -1,0 +1,18 @@
+This migration added all address data. Model inspired by Faker
+
+rails g model Address
+city:string
+street_name:string
+street_address:text
+ secondary_address:text
+ building_number:integer
+ zip_code:integer
+ time_zone:string
+ street_suffix:string
+ city_suffix:string
+ city_prefix:string
+ state_abbr:string
+ state:string
+ country:string
+ latitude:text
+ longitude:text

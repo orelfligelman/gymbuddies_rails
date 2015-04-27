@@ -3,33 +3,29 @@ class FriendsController < ApplicationController
 
   # GET /friends
   # GET /friends.json
-  def like
-    puts "OG STATUS" * 100
-    @friends = Friend.first
-    puts @friends.inspect
-    @friends.like = true
-    puts @friends.like.inspect
-    @friends.save
-    render partial: 'partials/gym_buddy'
+
+  def schedule
   end
 
-  def dislike
-    puts "OG STATUS" * 100
-    @friends = Friend.first
-    @friends.like = false
-    puts @friends.like.inspect
-    @friends.save
-    render partial: 'partials/gym_buddy'
+  def really_like
+  end
+
+  def really_really_like
+  end
+
+  def best_friends
   end
 
   def index
-    @friends = Friend.all
-    puts @friends.first.inspect
+    @friends = current_user.friends.all.order(:name).page(params[:page])
   end
+
 
   # GET /friends/1
   # GET /friends/1.json
   def show
+    @user = current_user
+    @friend = Friend.find(params[:id])
   end
 
   # GET /friends/new

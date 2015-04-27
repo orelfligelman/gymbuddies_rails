@@ -37,5 +37,18 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
+gem 'better_errors'
 gem 'carrierwave'
+gem 'private_pub'
+gem 'faye'
+gem 'websocket-rails'
+gem 'faker'
+gem 'pg'
+gem 'binding_of_caller'
+gem 'kaminari'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-instagram'
+gem 'seedbank'
+gem 'nested_form_fields'
