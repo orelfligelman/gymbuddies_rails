@@ -1,10 +1,10 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -39,9 +39,9 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 gem 'better_errors'
 gem 'carrierwave'
-gem 'private_pub'
-gem 'faye'
-gem 'websocket-rails'
+# gem 'private_pub'
+# gem 'faye'
+# gem 'websocket-rails'
 gem 'faker'
 gem 'pg'
 gem 'binding_of_caller'
@@ -52,3 +52,10 @@ gem 'omniauth-facebook'
 gem 'omniauth-instagram'
 gem 'seedbank'
 gem 'nested_form_fields'
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+gem 'google-api-client'
+gem 'rspec-rails'
+gem 'puma'
+gem 'rails_12factor', group: :production
+
+ruby "2.2.2"	

@@ -1,0 +1,17 @@
+add this to calendar
+mount uploader to photos 
+
+distinguish between types of workouts and find photos to match them 
+	i.e. cardio would be a person on a treadmill, lifting would be man at the gym 
+
+think social networks -- integrate the app with instagram so you can share gym buddy photos  and tag them 
+
+how is the notion of a "profile page" accomplished?
+
+
+Finding the gym buddy -
+	show all users except current user
+	exclude users who the current user has already disliked (at least for some time)
+
+Add all the gyms in NYC (or at least a smaller sample for now)
+

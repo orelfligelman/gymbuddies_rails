@@ -1,36 +1,36 @@
 $(function(){
-    // Bind the swiperightHandler callback function to the swipe e on div.box
-    $( "div.box" ).on( "swiperight", swiperightHandler );
-    $( "div.box" ).on( "swipeleft", swipeleftHandler );
+    // Bind the swiperightHandler callback function to the swipe event on div.box
+    $( "div.workout" ).on( "swiperight", swiperightHandler );
+    $( "div.workout" ).on( "swipeleft", swipeleftHandler );
 
-    // Callback function references the e target and adds the 'swiperight' class to it
-    function swiperightHandler( e ){
-        $( e.target).addClass( "swiperight");
+    // Callback function references the event target and adds the 'swiperight' class to it
+    function swiperightHandler( event ){
+
+        $( event.target).addClass( "swiperight");
         // alert('do i work?');
-          $.ajax({
-               url: "/users/:id/like",
+           $.ajax({
+               url: "/users/:id/like_workout",
                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
                type: 'POST'
-          });
-          $.ajax({
+            });
+            $.ajax({
             url: "/users/:id/index",
             beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
             type: 'GET'
-        });  
-
+        });
     }
-    function swipeleftHandler( e ){
-        $( e.target ).addClass( "swipeleft");
+    function swipeleftHandler( event ){
+        $( event.target ).addClass( "swipeleft");
         //alert('do i work?');
         $.ajax({
-            url: "/users/:id/dislike",
+            url: "/users/:id/dislike_workout",
             beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
             type: 'POST'
         });
-         $.ajax({
+        $.ajax({
             url: "/users/:id/index",
             beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
             type: 'GET'
-        });  
+        });
     }
 });
