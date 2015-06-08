@@ -1,15 +1,23 @@
 Rails.application.routes.draw do
-  resources :friends do
-    member do
-      post 'like'
-      post 'dislike'
+  devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
+  resources :users do
+    resources :friends do 
+      member do
+        post 'like'
+        post 'dislike'
+      end
     end
   end
 
+  resources :photos
+
+  resources :chats
+
+  resources :butts
 
   resources :gyms
 
-  resources :users
+  root to: "users#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

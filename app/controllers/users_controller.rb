@@ -1,10 +1,21 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+
+  def like
+    current_user.properties = {user_id: params([:id]), like: true}
+    current_user.save
+  end
+
+  def dislike
+    current_user.properties = {user_id: params([:id]), like: false}
+    current_user.save
+  end
   # GET /users
   # GET /users.json
   def index
     @users = User.all
+    # current_user.friends.all
   end
 
   # GET /users/1
@@ -69,6 +80,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :avatar)
+      params.require(:user).permit(:name, :avatar, :email)
     end
 end

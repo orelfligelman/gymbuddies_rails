@@ -1,6 +1,9 @@
 class GymsController < ApplicationController
   before_action :set_gym, only: [:show, :edit, :update, :destroy]
 
+  def member 
+    current_user.properties = {gym_id: params([:id]), member: true}
+  end
   # GET /gyms
   # GET /gyms.json
   def index

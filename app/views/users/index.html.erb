@@ -13,7 +13,7 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.name %></td>
-        <td><%= user.avatar %></td>
+        <td><%= image_tag user.avatar.url %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -25,3 +25,47 @@
 <br>
 
 <%= link_to 'New User', new_user_path %>
+
+<div class = "gym_div">
+  <p> What gym do you go to? </p>
+    <span class = "gym"> <%=@gym.next %> </select>
+</div> 
+
+<div class = "workout_div"> 
+  <p> What kind of workouts do you like doing at the gym? </p>
+    <span class ="workout"> <%@workout.first %>  
+</div> 
+
+<div class = "friends_div"> 
+  <p> Do you wanna workout with this person? </p>
+    <span class ="friends"> <%@friend.first %>  
+</div> 
+
+<div class = ""> 
+  <p> What kind of workouts do you like doing at the gym? </p>
+    <span class ="workout"> <%@workout.first %>  
+</div> 
+
+
+
+
+
+
+
+
+  <script type="text/javascript" src="https://addthisevent.com/libs/1.6.0/ate.min.js"></script>
+
+<div title="Add to Calendar" class="addthisevent">
+    Add to Calendar
+    <span class="start">06/18/2015 09:00 AM</span>
+    <span class="end">06/18/2015 11:00 AM</span>
+    <span class="timezone">America/New_York</span>
+    <span class="title">Summary of the event</span>
+    <span class="description">Description of the event</span>
+    <span class="location">Lgymocation of the event</span>
+    <span class="organizer">Organizer</span>
+    <span class="organizer_email">Organizer e-mail</span>
+    <span class="facebook_event">https://www.facebook.com/events/703782616363133</span>
+    <span class="all_day_event">true</span>
+    <span class="date_format">MM/DD/YYYY</span>
+</div>

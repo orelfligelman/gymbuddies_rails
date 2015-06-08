@@ -1,0 +1,7 @@
+
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: development
+  pool: 5
+  host: localhost

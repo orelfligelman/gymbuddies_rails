@@ -1,0 +1,37 @@
+<%= form_for(@butt) do |f| %>
+  <% if @butt.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@butt.errors.count, "error") %> prohibited this butt from being saved:</h2>
+
+      <ul>
+      <% @butt.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :fart %><br>
+    <%= f.check_box :fart %>
+  </div>
+  <div class="field">
+    <%= f.label :shape %><br>
+    <%= f.text_field :shape %>
+  </div>
+  <div class="field">
+    <%= f.label :percentbodysize %><br>
+    <%= f.text_field :percentbodysize %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
