@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   mount_uploader :avatar, AvatarUploader
-  accepts_nested_attributes_for :friends, allow_destroy: true
+  # accepts_nested_attributes_for :friends, allow_destroy: true
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook, :instagram]

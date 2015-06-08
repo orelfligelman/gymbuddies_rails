@@ -22,11 +22,10 @@ $(function(){
             beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
             type: 'POST'
         });
-        $.ajax({
-            url: "/friends/index",
-            beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
-            type: 'POST'
-        });
-    }
-});
+        // $.ajax({
+        //     url: "/friends/index",
+        //     beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+        //     type: 'POST'
+        // });
+    };
 
