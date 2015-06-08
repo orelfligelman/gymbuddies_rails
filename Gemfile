@@ -53,7 +53,7 @@ gem 'nested_form_fields'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 gem 'google-api-client'
 gem 'rspec-rails'
-gem 'puma'
+# gem 'puma'
 gem 'rails_12factor', group: :production
 
 ruby "2.2.2"	
